@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volleyball Scoreboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+        <h1 class="text-2xl font-bold mb-4">Volleyball Scoreboard</h1>
+        <div class="grid grid-cols-2 gap-8">
+            <!-- Team A -->
+            <div>
+                <h2 id="teamA-name" class="text-xl font-semibold mb-2">Team A</h2>
+                <p class="text-4xl font-bold" id="teamA-score">0</p>
+                <button onclick="incrementScore('A')" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">+1 Point</button>
+                <p class="text-lg mt-4">Sets Won: <span id="teamA-sets">0</span></p>
+            </div>
+
+            <!-- Team B -->
+            <div>
+                <h2 id="teamB-name" class="text-xl font-semibold mb-2">Team B</h2>
+                <p class="text-4xl font-bold" id="teamB-score">0</p>
+                <button onclick="incrementScore('B')" class="mt-4 bg-blue-500 text-white px-4 py-2 rounded">+1 Point</button>
+                <p class="text-lg mt-4">Sets Won: <span id="teamB-sets">0</span></p>
+            </div>
+        </div>
+
+        <div class="mt-8">
+            <button onclick="resetScores()" class="bg-red-500 text-white px-6 py-2 rounded">Reset Scores</button>
+        </div>
+
+        <div class="mt-4">
+            <h3 class="text-xl font-semibold">Game Point: <span id="game-point">25</span></h3>
+            <p class="text-sm text-gray-500">(Game ends when a team reaches the game point and leads by 2 points)</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
